@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="LinkedList\" />
+    <Folder Include="Arrays\" />
+    <Folder Include="HashTables\" />
+    <Folder Include="Trees\" />
+    <Folder Include="Recursion\" />
+    <Folder Include="Searching\" />
+    <Folder Include="Sorting\" />
+    <Folder Include="StackAndQueues\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="3.1.4" />
+  </ItemGroup>
+
+</Project>
