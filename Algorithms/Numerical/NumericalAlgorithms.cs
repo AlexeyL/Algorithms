@@ -11,7 +11,7 @@ namespace Algorithms.Numerical
         /// Method randomizes an array
         /// </summary>
         /// <param name="array"></param>
-        /// <returns></returns>
+        /// <returns>randomized array</returns>
         public List<int> RandomizeAnArray(List<int> array)
         {
             var result = array.ToList();
@@ -33,7 +33,7 @@ namespace Algorithms.Numerical
         /// </summary>
         /// <param name="numA"></param>
         /// <param name="numB"></param>
-        /// <returns></returns>
+        /// <returns>greatest common divisor</returns>
         public int FindGreatestCommonDivisors(int numA, int numB)
         {
             while (numB != 0)

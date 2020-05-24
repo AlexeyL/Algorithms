@@ -39,7 +39,7 @@ namespace AlgorithmtXUnitTest.Numeric
             var gcd = numericalAlgorithms.FindGreatestCommonDivisors(numA, numB);
 
             // Assert
-            Assert.Equal(gcd, 231);
+            Assert.Equal(231, gcd);
         }
     }
 }
