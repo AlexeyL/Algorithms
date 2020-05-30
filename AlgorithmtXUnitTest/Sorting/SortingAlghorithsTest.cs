@@ -3,11 +3,11 @@ using Xunit;
 
 namespace AlgorithmtXUnitTest.Sorting
 {
-    public class BubbleSortTest
+    public class SortingAlghorithsTest
     {
         private BubbleSort bubbleSort;
 
-        public BubbleSortTest()
+        public SortingAlghorithsTest()
         {
             bubbleSort = new BubbleSort();
         }
