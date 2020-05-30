@@ -41,5 +41,30 @@ namespace AlgorithmtXUnitTest.Numeric
             // Assert
             Assert.Equal(231, gcd);
         }
+
+        [Fact]
+        public void GetHammingDistance_ReturnException()
+        {
+            // Arrange
+            var stringA = "abcdef";
+            var stringB = "abc";
+
+            // Act Assert
+            Assert.Throws<ArgumentException>(() => numericalAlgorithms.GetHammingDistance(stringA, stringB));
+        }
+
+        [Fact]
+        public void GetHammingDistance_ReturnEDistance()
+        {
+            // Arrange
+            var stringA = "abcdef";
+            var stringB = "abceee";
+
+            // Act
+            var distance = numericalAlgorithms.GetHammingDistance(stringA, stringB);
+
+            // Assert
+            Assert.Equal(2, distance);
+        }
     }
 }

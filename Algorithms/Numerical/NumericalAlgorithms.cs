@@ -45,5 +45,26 @@ namespace Algorithms.Numerical
 
             return numA;
         }
+
+        /// <summary>
+        /// Hamming distance is a metric for comparing two strings
+        /// </summary>
+        /// <param name="s"></param>
+        /// <param name="t"></param>
+        /// <returns>Number of different symbols</returns>
+        public int GetHammingDistance(string s, string t)
+        {
+            if (s.Length != t.Length)
+            {
+                throw new ArgumentException("Strings must be equal length");
+            }
+
+            int distance =
+                s.ToCharArray()
+                .Zip(t.ToCharArray(), (c1, c2) => new { c1, c2 })
+                .Count(m => m.c1 != m.c2);
+
+            return distance;
+        }
     }
 }
