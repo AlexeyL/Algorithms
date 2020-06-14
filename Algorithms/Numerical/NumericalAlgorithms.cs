@@ -47,6 +47,64 @@ namespace Algorithms.Numerical
         }
 
         /// <summary>
+        /// Method rise number to power
+        /// </summary>
+        /// <param name="num"></param>
+        /// <param name="power"></param>
+        /// <returns></returns>
+        public double RaiseToPower(double num, int power)
+        {
+            if (power < 0)
+            {
+                throw new ArgumentOutOfRangeException("Power can't be negative");
+            }
+
+            if (power < 1)
+            {
+                return 0;
+            }
+
+            if (power == 1)
+            {
+                return num;
+            }
+
+            var dic = new Dictionary<int, double>();
+            dic.Add(2, num * num);
+
+            for (int i = 4; i <= power; i *= 2)
+            {
+                dic.Add(i, dic[i / 2] * num);
+            }
+
+            if (dic.Last().Key == power)
+            {
+                return dic.Last().Value;
+            }
+
+            if (power % 2 == 0)
+            {
+                var lastKey = dic.Keys.Reverse().First();
+                var secondToLastKey = dic.Keys.Reverse().Skip(1).First();
+
+                return dic[secondToLastKey] + dic[lastKey];
+            }
+            else
+            {
+                var index = dic.Keys.Last();
+                var res = dic[index];
+                
+                while (index != power)
+                {
+                    res = res * num;
+                    index++;
+                }
+
+                return res;
+            }
+        }
+
+        /// <summary>
         /// Hamming distance is a metric for comparing two strings
         /// </summary>
         /// <param name="s"></param>

@@ -43,6 +43,20 @@ namespace AlgorithmtXUnitTest.Numeric
         }
 
         [Fact]
+        public void RaiseToPower_Return_RaisedNumber()
+        {
+            // Arrange
+            var num = 2;
+            var power = 6;
+
+            // Act
+            var result = numericalAlgorithms.RaiseToPower(num, power);
+
+            // Arrange
+            Assert.Equal(64, result);
+        }
+
+        [Fact]
         public void GetHammingDistance_ReturnException()
         {
             // Arrange
