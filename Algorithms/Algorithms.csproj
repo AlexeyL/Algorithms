@@ -11,7 +11,6 @@
     <Folder Include="HashTables\" />
     <Folder Include="Trees\" />
     <Folder Include="Recursion\" />
-    <Folder Include="Sorting\" />
     <Folder Include="StackAndQueues\" />
   </ItemGroup>
 
