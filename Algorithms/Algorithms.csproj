@@ -6,12 +6,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="LinkedList\" />
     <Folder Include="Arrays\" />
     <Folder Include="HashTables\" />
     <Folder Include="Trees\" />
     <Folder Include="Recursion\" />
-    <Folder Include="StackAndQueues\" />
+    <Folder Include="_DataSrtucture\Base\" />
   </ItemGroup>
 
   <ItemGroup>

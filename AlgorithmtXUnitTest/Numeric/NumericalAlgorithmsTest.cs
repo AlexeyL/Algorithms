@@ -53,7 +53,7 @@ namespace AlgorithmtXUnitTest.Numeric
             var result = numericalAlgorithms.RaiseToPower(num, power);
 
             // Arrange
-            Assert.Equal(64, result);
+            Assert.Equal(128, result);
         }
 
         [Fact]
@@ -79,6 +79,50 @@ namespace AlgorithmtXUnitTest.Numeric
 
             // Assert
             Assert.Equal(2, distance);
+        }
+
+        [Fact]
+        public void GetFibonacciNum_Returns_Num()
+        {
+            // Arrange
+            var num = 50;
+            var memo = new Dictionary<int, long>();
+
+            // Act
+            var result = numericalAlgorithms.GetFibonacciNum(num, memo);
+
+            // Assert
+            Assert.Equal(12586269025, result);
+        }
+
+        [Fact]
+        public void GetTraveler_Returns_NumberOfPossibleWays()
+        {
+            // Arrange
+            var m = 3;
+            var n = 3;
+            var memo = new Dictionary<string, long>();
+
+            // Act
+            var result = numericalAlgorithms.GetTraveler(m, n, memo);
+
+            // Assert
+            Assert.Equal(6, result);
+        }
+
+        [Fact]
+        public void GetSum_Returns_Boolean()
+        {
+            // Arrange
+            var targetSum = 300;
+            var numbers = new int[] { 5, 4, 7 };
+            var memo = new Dictionary<int, bool>();
+
+            // Act
+            var result = numericalAlgorithms.GetSum(targetSum, numbers, memo);
+
+            // Assert
+            Assert.True(result);
         }
     }
 }

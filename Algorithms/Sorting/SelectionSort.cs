@@ -6,36 +6,40 @@ namespace Algorithms.Sorting
 {
     public class SelectionSort
     {
-        public List<int> Sort(List<int> list)
+        /// <summary>
+        /// Method sort an array of int
+        /// </summary>
+        /// <param name="array"></param>
+        /// <returns>sorted array</returns>
+        public int[] Sort(int[] items)
         {
-            var newList = new List<int>();
-            var listCount = list.Count - 1;
+            int temp, smallest;
 
-            for (var i = listCount; i >= 0; i --)
+            //The algorithm builds the sorted list from the left.
+            //1. For each item in the array...
+            for (var i = 0; i < items.Length - 1; i++)
             {
-                var smallest = FindSmallest(list);
-                newList.Add(list[smallest]);
-                list.RemoveAt(smallest);
-            }
-
-            return newList;
-        }
-
-        private int FindSmallest(List<int> list)
-        {
-            var smallest = list[0];
-            var smallestIndex = 0;
-
-            for (var i = 0;  i < list.Count; i ++)
-            {
-                if (list[i] < smallest)
+                //2. ...assume the first item is the smallest value
+                smallest = i;
+                
+                //3. Cycle through the rest of the array
+                for (int j = i + 1; j < items.Length; j++)
                 {
-                    smallest = list[i];
-                    smallestIndex = i;
+                    //4. If any of the remaining values are smaller, 
+                    //   find the smallest of these
+                    if (items[j] < items[smallest])
+                    {
+                        smallest = j;
+                    }
                 }
+
+                //5. Swap the found-smallest value with the current value
+                temp = items[smallest];
+                items[smallest] = items[i];
+                items[i] = temp;
             }
 
-            return smallestIndex;
+            return items;
         }
     }
 }
