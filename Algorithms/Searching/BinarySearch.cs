@@ -4,6 +4,7 @@ using System.Text;
 
 namespace Algorithms.Searching
 {
+    // log(n)
     public class BinarySearch
     {
         /// <summary>
@@ -11,8 +12,8 @@ namespace Algorithms.Searching
         /// </summary>
         /// <param name="array"></param>
         /// <param name="x"></param>
-        /// <returns></returns>
-        public bool SearchIterative(int[] array, int x)
+        /// <returns>index</returns>
+        public int SearchIterative(int[] array, int x)
         {
             int left = 0;
             int right = array.Length - 1;
@@ -22,14 +23,14 @@ namespace Algorithms.Searching
                 int mid = left + ((right - left) / 2);
 
                 if (array[mid] == x)
-                    return true;
+                    return mid;
                 else if (x < array[mid])
                     right = mid - 1;
                 else
                     left = mid + 1;
             }
 
-            return false;
+            return -1;
         }
 
         /// <summary>
@@ -37,8 +38,8 @@ namespace Algorithms.Searching
         /// </summary>
         /// <param name="array"></param>
         /// <param name="x"></param>
-        /// <returns></returns>
-        public bool SearchRecursive(int[] array, int x)
+        /// <returns>index</returns>
+        public int SearchRecursive(int[] array, int x)
         {
             return SearchRecursive(array, 0, array.Length - 1, x);
         }
@@ -51,15 +52,15 @@ namespace Algorithms.Searching
         /// <param name="right"></param>
         /// <param name="x"></param>
         /// <returns></returns>
-        private bool SearchRecursive(int[] array, int left, int right, int x)
+        private int SearchRecursive(int[] array, int left, int right, int x)
         {
             if (left > right)
-                return false;
+                return -1;
 
             int mid = left + ((right - left) / 2);
 
             if (array[mid] == x)
-                return true;
+                return mid;
             else if (x < array[mid])
                 return SearchRecursive(array, left, mid - 1, x);
             else

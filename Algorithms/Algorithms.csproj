@@ -2,13 +2,12 @@
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <TargetFramework>net6.0</TargetFramework>
   </PropertyGroup>
 
   <ItemGroup>
     <Folder Include="Arrays\" />
     <Folder Include="HashTables\" />
-    <Folder Include="Trees\" />
     <Folder Include="Recursion\" />
     <Folder Include="_DataSrtucture\Base\" />
   </ItemGroup>
