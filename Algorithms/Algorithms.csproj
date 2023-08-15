@@ -6,11 +6,21 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Arrays\" />
-    <Folder Include="HashTables\" />
-    <Folder Include="Trees\" />
-    <Folder Include="Recursion\" />
-    <Folder Include="_DataSrtucture\Base\" />
+    <Compile Remove="Arrays\**" />
+    <Compile Remove="HashTables\**" />
+    <Compile Remove="Recursion\**" />
+    <Compile Remove="Trees\**" />
+    <Compile Remove="_DataSrtucture\Base\**" />
+    <EmbeddedResource Remove="Arrays\**" />
+    <EmbeddedResource Remove="HashTables\**" />
+    <EmbeddedResource Remove="Recursion\**" />
+    <EmbeddedResource Remove="Trees\**" />
+    <EmbeddedResource Remove="_DataSrtucture\Base\**" />
+    <None Remove="Arrays\**" />
+    <None Remove="HashTables\**" />
+    <None Remove="Recursion\**" />
+    <None Remove="Trees\**" />
+    <None Remove="_DataSrtucture\Base\**" />
   </ItemGroup>
 
   <ItemGroup>
