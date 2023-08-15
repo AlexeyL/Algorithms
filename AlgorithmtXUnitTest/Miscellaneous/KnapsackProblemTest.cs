@@ -1,7 +1,5 @@
 ﻿using Algorithms.Miscellaneous;
-using System;
 using System.Collections.Generic;
-using System.Text;
 using Xunit;
 
 namespace AlgorithmtXUnitTest.Miscellaneous
